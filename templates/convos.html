@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% set active_page = "convos" %}
+{% set active_user = user %}
+
+{% block heading %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/login-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="row">
+  <div class="pricing-item active mentor-chat">
+    <div class="user-image">
+        <img style="width:80px; height:80px; border-radius: 100px;" src="{{ url_for('static', filename='/images/headshot-jacquelyn.jpg') }}" alt="">
+        <p class="caption" id="name"><b>Jacquelyn Chow</b></p>
+        <p class="caption">Director of AStartUpToo</p>
+    </div>
+    <h4 id="chat-label">Chat with your mentor 1-1</h4>
+    <p id="no-messages">Hey <span id="user">{{ user }}</span>, what would you like to learn about growing your business?</p>
+
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body message_holder_them"">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body message_holder_mine">
+        </div>
+      </div>
+    </div>
+
+    <form id="convo-form" action="{{ url_for('login') }}" method="POST" class="form-inline">
+      <div class="form-group">
+            <fieldset>
+              <input name="password" type="text" class="form-control message" id="email" placeholder="Enter message" required="">
+            </fieldset>
+      </div>
+      <div class="form-group">
+            <fieldset>
+              <button type="submit" class="main-button" id="send-text">Send</button>
+            </fieldset>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+<script type="text/javascript">
+  var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+  socket.on( 'connect', function() {
+    socket.emit( 'my event', {
+      data: 'User Connected'
+    } )
+    var form = $( 'form' ).on( 'submit', function( e ) {
+      e.preventDefault()
+      let user_name = $( '#user' ).text()
+      let user_input = $( 'input.message' ).val()
+      socket.emit( 'my event', {
+        user_name : user_name,
+        message : user_input
+      } )
+      $( 'input.message' ).val( '' ).focus()
+    } )
+  } )
+  socket.on( 'my response', function( msg ) {
+    console.log( msg )
+    if( typeof msg.user_name !== 'undefined' ) {
+      // $( 'p' ).remove()
+      if (msg.user_name == $( '#user' ).text()) {
+        $( 'div.message_holder_mine' ).append( '<div class="bubble_mine"><b style="color: black">'+msg.user_name+'</b> '+msg.message+'</div>' )
+        $( 'div.message_holder_them' ).append( '<div class="invisible_bubble"><b style="color: white">'+msg.user_name+msg.message+'</b> '+'</div>' )
+      } else {
+        $( 'div.message_holder_them' ).append( '<div class="bubble_them"><b style="color: black">'+msg.user_name+'</b> '+msg.message+'</div>' )
+        $( 'div.message_holder_mine' ).append( '<div class="invisible_bubble"><b style="color: white">'+msg.user_name+msg.message+'</b> '+'</div>' )
+      }
+    }
+  })
+</script>
+{% endblock %}

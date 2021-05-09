@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+{% set active_page = "feedback" %}
+
+{% block heading %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/templatemo-softy-pinko.css') }}">
+{% endblock %}
+
+
+{% block body %}
+<div class="inspo mt-5" id="inspiration">
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header">
+                            <h2 class="inspo-title">Feedback Forum</h2> 
+                            <h5 style="margin-left: 15px">Greens Food Suppliers </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex flex-column">
+                        <div class="card p-2 mt-4" style="width: 100%; margin-bottom: 2em;">
+                            <div class="card-body LRwrapper">
+                                <div class="business-image">
+                                    <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/greens.png') }}" alt="">
+                                </div>
+                                <div class="business-info">
+                                    <h5 class="business-title mb-3"><strong>Greens Food Suppliers</strong></h5>
+                                    <p class="business-text mb-1">Location: Media, PA</p>
+                                    <p class="business-text">Greens is a family owned market with locations in Swarthmore (since 1991) and Media, PA (since 2011) specializing in fresh, seasonal lunch and dinner options, craft beer, natural wine and local grass fed cheeses. We have a cafe at each location where you can enjoy one of our amazing salads, sandwiches, burgers and an assortment of vegan options. Stay for dinner and pick from a huge selection of craft beer and uniquely curated natural wine.  We've recently been recognized by both local and national press as having one of best natural wine selections in Philadelphia and beyond. </p>
+                                </div>
+                                <div class="share-apply-btns">
+                                    <a href="#" target="_blank" class="main-button mr-2">Donate</a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="main-button"><svg fill="#ffffff" height="10pt" viewBox="-21 0 512 512" width="10pt" xmlns="http://www.w3.org/2000/svg"><path d="m453.332031 85.332031c0 38.292969-31.039062 69.335938-69.332031 69.335938s-69.332031-31.042969-69.332031-69.335938c0-38.289062 31.039062-69.332031 69.332031-69.332031s69.332031 31.042969 69.332031 69.332031zm0 0"/><path d="m384 170.667969c-47.0625 0-85.332031-38.273438-85.332031-85.335938 0-47.058593 38.269531-85.332031 85.332031-85.332031s85.332031 38.273438 85.332031 85.332031c0 47.0625-38.269531 85.335938-85.332031 85.335938zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.332031 0 29.398438 23.914062 53.335938 53.332031 53.335938s53.332031-23.9375 53.332031-53.335938c0-29.394531-23.914062-53.332031-53.332031-53.332031zm0 0"/><path d="m453.332031 426.667969c0 38.289062-31.039062 69.332031-69.332031 69.332031s-69.332031-31.042969-69.332031-69.332031c0-38.292969 31.039062-69.335938 69.332031-69.335938s69.332031 31.042969 69.332031 69.335938zm0 0"/><path d="m384 512c-47.0625 0-85.332031-38.273438-85.332031-85.332031 0-47.0625 38.269531-85.335938 85.332031-85.335938s85.332031 38.273438 85.332031 85.335938c0 47.058593-38.269531 85.332031-85.332031 85.332031zm0-138.667969c-29.417969 0-53.332031 23.9375-53.332031 53.335938 0 29.394531 23.914062 53.332031 53.332031 53.332031s53.332031-23.9375 53.332031-53.332031c0-29.398438-23.914062-53.335938-53.332031-53.335938zm0 0"/><path d="m154.667969 256c0 38.292969-31.042969 69.332031-69.335938 69.332031-38.289062 0-69.332031-31.039062-69.332031-69.332031s31.042969-69.332031 69.332031-69.332031c38.292969 0 69.335938 31.039062 69.335938 69.332031zm0 0"/><path d="m85.332031 341.332031c-47.058593 0-85.332031-38.269531-85.332031-85.332031s38.273438-85.332031 85.332031-85.332031c47.0625 0 85.335938 38.269531 85.335938 85.332031s-38.273438 85.332031-85.335938 85.332031zm0-138.664062c-29.417969 0-53.332031 23.933593-53.332031 53.332031s23.914062 53.332031 53.332031 53.332031c29.421875 0 53.335938-23.933593 53.335938-53.332031s-23.914063-53.332031-53.335938-53.332031zm0 0"/><path d="m135.703125 245.761719c-7.425781 0-14.636719-3.863281-18.5625-10.773438-5.824219-10.21875-2.238281-23.253906 7.980469-29.101562l197.949218-112.851563c10.21875-5.867187 23.253907-2.28125 29.101563 7.976563 5.824219 10.21875 2.238281 23.253906-7.980469 29.101562l-197.953125 112.851563c-3.328125 1.898437-6.953125 2.796875-10.535156 2.796875zm0 0"/><path d="m333.632812 421.761719c-3.585937 0-7.210937-.898438-10.539062-2.796875l-197.953125-112.851563c-10.21875-5.824219-13.800781-18.859375-7.976563-29.101562 5.800782-10.238281 18.855469-13.84375 29.097657-7.976563l197.953125 112.851563c10.21875 5.824219 13.800781 18.859375 7.976562 29.101562-3.945312 6.910157-11.15625 10.773438-18.558594 10.773438zm0 0"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="header">
+                                            <h4 class="inspo-title">Comments & Feedback (4) </h4> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <div class="card p-2 mt-4" style="width: 100%;">
+                            <div class="card-body LRwrapper">
+                                <div class="business-image" style="border-radius: 50%;">
+                                    <img style="width:75px; height:75px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/head1.jpg') }}" alt="">
+                                </div>
+                                <div class="business-info">
+                                    <h5 class="business-title mb-3"><p>Courtney Wu</p></h5>
+                                    <p>
+                                        <h6>Marketing Manager at Trader Joe's</h6>
+                                    </p>
+                                    <p class="business-text">This looks good! Given the suburban population of the area you're based at, seasonal and organic food will certainly secure a substantial customer base in the area. 
+                                        My advice to you is to be careful of the recent cow disease, since it is known to critically affect the taste of the meat. Since your business hinges on the "healthy and wholesome" image, 
+                                        one blow to your reputation will be the end of your career. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card p-2 mt-4" style="width: 100%;">
+                                <div class="card-body LRwrapper">
+                                    <div class="business-image" style="border-radius: 50%;">
+                                        <img style="width:75px; height:75px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/head4.jpg') }}" alt="">
+                                    </div>
+                                    <div class="business-info">
+                                        <h5 class="business-title mb-3"><p>Mikaela Thomas</p></h5>
+                                        <p>
+                                            CEO of RecentStartup</h6>
+                                        </p>
+                                        <p class="business-text">Amazing! I live near Media, PA and am thrilled to see more local food businesses like yours come in. 
+                                            A rookie mistake easy to make is not choosing your suppliers carefully - more local businsses struggle because they didn't go through the proper steps 
+                                            for this. Is your prospective supplier over-priced? Do they have a reputation of being hard to negotiate with? Do your research, if you don't want to 
+                                            see your margins minimized.
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="card p-2 mt-4" style="width: 100%;">
+                                <div class="card-body LRwrapper">
+                                    <div class="business-image" style="border-radius: 50%;">
+                                        <img style="width:75px; height:75px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/headshot.jpg') }}" alt="">
+                                    </div>
+                                    <div class="business-info">
+                                        <h5 class="business-title mb-3"><p>Steve Pharell</p></h5>
+                                        <p>
+                                            Marketing Manager at Trader Joe's</h6>
+                                        </p>
+                                        <p class="business-text">I don't think I'm getting a clear picture of your brand. Are you focusing on sandwiches? Lunch meats? Cheeses? Local food business is all about securing a friendly image. I suggest that you think about 
+                                            what values you are offering to the community again, and tailor your mission statement accordingly. 
+                                            But this is a good start!
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card p-2 mt-4" style="width: 100%;">
+                                <div class="card-body LRwrapper">
+                                    <div class="business-image" style="border-radius: 50%;">
+                                        <img style="width:75px; height:75px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/head2.jpg') }}" alt="">
+                                    </div>
+                                    <div class="business-info">
+                                        <h5 class="business-title mb-3"><p>Beatrice O'Connor</p></h5>
+                                        <p>
+                                            Marketing Manager at Trader Joe's</h6>
+                                        </p>
+                                        <p class="business-text">I agree with everything that's been said here already. I would also ask you to consider 
+                                            commissioning a mobile app for your delivery service, and be generous with promotions to new customers. Do not be thrifty with the costs of developing the app, 
+                                            the ongoing pandemic will make delivery service a valuable source of revenue for you. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <nav class="mt-5" aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+{% endblock %}

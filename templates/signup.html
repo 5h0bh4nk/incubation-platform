@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% set active_page = "signup" %}
+
+{% block heading %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/signup-styles.css') }}">
+   
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="pricing-item active">
+            <h4 id="login-label">Join our community!</h4>
+            <form id="login-form" action="{{ url_for('signup') }}" method="POST">
+            <div class="form-group">
+                <label for="name">Username</label>
+                    <fieldset>
+                    <input name="username" type="text" class="form-control" id="name" placeholder="Username" required="">
+                    </fieldset>
+            </div>
+            <div class="form-group">
+                    <label for="email">Password</label>
+                    <fieldset>
+                    <input name="password" type="password" class="form-control" id="email" placeholder="Password" required="">
+                    </fieldset>
+            </div>
+            <div class="form-group">
+                    <label for="email">Confirm Password</label>
+                    <fieldset>
+                    <input name="confirmation" type="password" class="form-control" id="confirmation" placeholder="Confirmation" required="">
+                    </fieldset>
+            </div>
+
+            <div class="form-group preference-buttons-container">
+                <h6 id="login-label">What do you need help with?</h6>
+                    <div class="pref-buttons-inner">
+                            <div class="ck-button">
+                                <label>
+                                    <input type="checkbox" name="options" id="1" value="business ideas" hidden> <span>Business Ideas</span> 
+                                </label>    
+                                </div>
+                            <div class="ck-button">
+                                <label>
+                                    <input type="checkbox" name="options" id="2" value="funding" hidden> <span>Funding</span> 
+                                </label>    
+                            </div>
+                            <div class="ck-button">
+                                <label>
+                                    <input type="checkbox" name="options" id="3" value="management" hidden> <span>Management</span> 
+                                </label>    
+                            </div>
+                            
+                    </div>
+                    <div class="pref-buttons-inner three">
+                        <div class="ck-button">
+                                <label>
+                                    <input type="checkbox" name="options" id="4" value="human resources" hidden> <span>Human Resources</span> 
+                                </label>    
+                        </div>
+                        <div class="ck-button">
+                            <label>
+                                <input type="checkbox" name="options" id="5" value="professional writing" hidden> <span>Professional Writing</span> 
+                            </label>    
+                        </div>
+                    </div>
+                    <div class="pref-buttons-inner">
+                            <div class="ck-button">
+                                <label>
+                                    <input type="checkbox" name="options" id="6" value="networking" hidden> <span>Networking</span> 
+                                </label>    
+                                </div>
+                            <div class="ck-button">
+                                <label>
+                                    <input type="checkbox" name="options" id="7" value="patent" hidden> <span>Patent Related</span> 
+                                </label>    
+                            </div>
+                            <div class="ck-button">
+                                <label>
+                                    <input type="checkbox" name="options" id="8" value="marketing" hidden> <span> Marketing</span> 
+                                </label>    
+                            </div>
+                            
+                    </div>
+                    
+                       
+                    
+            </div>
+
+            <div class="form-group d-flex justify-content-center">
+                <fieldset>
+                    <button type="submit" id="login-submit" class="main-button">Sign Up</button>
+                </fieldset>
+            </div>
+            
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}

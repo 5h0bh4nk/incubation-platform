@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+{% set active_user = user %}
+
+{% set active_page = "funding" %}
+
+{% block heading %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/funding-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="fund-req" id="fund-req-container">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header">
+                        <h2 class="inspo-title"> Entrepreneurs Seeking Help</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="d-flex" style="display: flex; flex-wrap: wrap;">
+                    <div class="card p-2 mt-4" style="width: 31%; margin-right: 1em;">
+                        <div class="card-body LRwrapper" style="display: flex; flex-direction: column; justify-content: center">
+                            <div class="card-row-1" >
+                                <div class="business-image" >
+                                    <img src="{{ url_for('static', filename='/images/yoga.png') }}" alt="">
+                                </div>
+                            
+                                <div class="share-apply-btns" >
+                                    <a href="#" class="main-button mr-2" style="margin-bottom: 1em;">Feedback</a>
+                                    <a href="#" class="main-button" style="text-align: center;">Donate</a>
+                                </div>
+                            </div>
+                        
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Yoga Baby</strong></h5> 
+                                <strong><span>Suki Zhao </span></strong>
+                                <p class="business-text mb-1">Help us bring a culture of wellbeing support to Baltimore, MD</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card p-2 mt-4" style="width: 31%; margin-right: 1em;">
+                        <div class="card-body LRwrapper" style="display: flex; flex-direction: column; justify-content: center">
+                            <div class="card-row-1" >
+                                    <div class="business-image" >
+                                        <img src="{{ url_for('static', filename='/images/greens.png') }}" alt="">
+                                    </div>
+                                    <div class="share-apply-btns" >
+                                            <a href="{{ url_for('feedback') }}" class="main-button mr-2" style="margin-bottom: 1em;">Feedback</a>
+                                            <a href="#" class="main-button" style="text-align: center;">Donate</a>
+                                    </div>
+                            </div>
+                                
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Greens Food <br> Suppliers</strong></h5> 
+                                <strong><span>Sue MacQueen</span></strong>
+                                <p class="business-text mb-1">As a family business, we hope to provide fresh local food all year round</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-2 mt-4" style="width: 31%; margin-right: 1em;">
+                            <div class="card-body LRwrapper" style="display: flex; flex-direction: column; justify-content: center">
+                                <div class="card-row-1" >
+                                    <div class="business-image" >
+                                        <img  src="{{ url_for('static', filename='/images/space-cube.png') }}" alt="">
+                                    </div>
+
+                                    <div class="share-apply-btns" >
+                                        <a href="#" class="main-button mr-2" style="margin-bottom: 1em;">Feedback</a>
+                                        <a href="#" class="main-button" style="text-align: center;">Donate</a>
+                                    </div>
+                                </div>
+
+                                <div class="business-info">
+                                    <h5 class="business-title mb-3"><strong>Space Cube</strong></h5>
+                                    <strong><span>Ziri Marquez</span></strong>
+                                    <p class="business-text mb-1">A group of new college graduates looking to build cool architecture projects!</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 31%; margin-right: 1em;">
+                            <div class="card-body LRwrapper" style="display: flex; flex-direction: column; justify-content: center">
+                                <div class="card-row-1">
+                                    <div class="business-image">
+                                        <img  src="{{ url_for('static', filename='/images/beauty.png') }}" alt="">
+                                    </div>
+                                    <div class="share-apply-btns" >
+                                        <a href="#" class="main-button mr-2" style="margin-bottom: 1em;">Feedback</a>
+                                        <a href="#" class="main-button" style="text-align: center;">Donate</a>
+                                     </div>
+                                </div>
+                                
+                                <div class="business-info">
+                                    <h5 class="business-title mb-3"><strong>Beauty Box</strong></h5>
+                                    <strong> <span>Rebecca Palden</span> </strong>
+                                    <p class="business-text mb-1">We hope to bring you a wider range of products for darker skin tones</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 31%; margin-right: 1em;">
+                            <div class="card-body LRwrapper" style="display: flex; flex-direction: column; justify-content: center">
+                                <div class="card-row-1">
+                                    <div class="business-image" >
+                                        <img src="{{ url_for('static', filename='/images/chesh.png') }}" alt="">
+                                    </div>
+                                    <div class="share-apply-btns" >
+                                            <a href="#" class="main-button mr-2" style="margin-bottom: 1em;">Feedback</a>
+                                            <a href="#" class="main-button" style="text-align: center;">Donate</a>
+                                    </div>
+                                </div>
+                                
+                            
+                            <div>
+                                <div class="business-info">
+                                    <h5 class="business-title mb-3"><strong>Cheshire County <br> Hygiene Services</strong></h5>
+                                    <strong><span>Josie Ross</span></strong>
+                                    <p class="business-text mb-1">The county's first hygiene services run by a woman - help us fight the pandemic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-2 mt-4" style="width: 31%; margin-right: 1em;">
+                            <div class="card-body LRwrapper" >
+                                <div class="card-row-1" >
+                                    <div class="business-image" >
+                                        <img src="{{ url_for('static', filename='/images/the-web-works.png') }}" alt="">
+                                    </div>
+                                    <div class="share-apply-btns">
+                                        <a href="#" class="main-button mr-2" style="margin-bottom: 1em;">Feedback</a>
+                                        <a href="#" class="main-button" style="text-align: center;">Donate</a>
+                                    </div>
+
+                                </div>
+                                
+                               
+                            <div>
+                                <div class="business-info">
+                                    <h5 class="business-title mb-3"><strong> WebWorks</strong></h5>
+                                    <strong><span>Sarah Lin</span></strong>
+                                    <p class="business-text mb-1">Find personalized web design tools and templates for your product </p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

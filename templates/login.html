@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% set active_page = "login" %}
+{% set active_user = user %}
+
+{% block heading %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/login-styles.css') }}">
+
+{% endblock %}
+
+{% block body %}
+<div class="row mt-3">
+        <div class="pricing-item active">
+          <div class="center-text" style="margin-top:-50px">
+            <i class="fa fa-user-circle" style="font-size: 130px; color: #6F8BA4;" aria-hidden="true"></i>
+          </div>
+          <h4 id="login-label">Already have an account?</h4>
+          <form id="login-form" action="{{ url_for('login') }}" method="POST">
+            <div class="form-group">
+                <label class="username" for="name">Username</label>
+                  <fieldset>
+                    <input name="username" type="text" class="form-control" id="name" placeholder="Username" required="">
+                  </fieldset>
+            </div>
+            <div class="form-group">
+                  <label class="password" for="email">Password</label>
+                  <fieldset>
+                    <input name="password" type="password" class="form-control" id="email" placeholder="Password" required="">
+                  </fieldset>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <fieldset>
+                  <button type="submit" id="login-submit" class="main-button">Login</button>
+                </fieldset>
+            </div>
+            <div class="forgot-pw center-text">
+              <p>Forgot your password? <a class="forgot-link" href="#">Click here</a></p>
+            </div>
+          </form>
+        </div>
+</div>
+{% endblock %}

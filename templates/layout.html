@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Technica Hackathon 2020 Submission">
+    <meta name="author" content="Alice Huang, Jacquelyn Chow, Sojin Lim">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>ThriveHer</title>
+<!--
+SOFTY PINKO
+https://templatemo.com/tm-535-softy-pinko
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/font-awesome.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/templatemo-softy-pinko.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                  {% if active_user %}
+                  <p class="logged-in">Welcome, {{ active_user }}</p>
+                  {% endif %}
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="{{ url_for('static', filename='/images/thriveher.jpg') }}" alt=""/>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
+                            {% if not active_user %}
+                            <li><a href="{{ url_for('login') }}" class="{{ 'active' if active_page == 'login' else '' }}">Login</a></li>
+                            {% endif %}
+                            <li><a href="{{ url_for('inspiration') }}" class="{{ 'active' if active_page == 'inspiration' else '' }}">Inspirations</a></li>
+                            <li><a href="{{ url_for('convos') }}" class="{{ 'active' if active_page == 'convos' else '' }}">Conversations</a></li>
+                            <li><a href="{{ url_for('funding') }}" class="{{ 'active' if active_page == 'funding' else '' }}">Feedback & Funding</a></li>
+                            {% if active_user %}
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            {% endif %}
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+
+        <!-- ***** Header Text Start ***** -->
+    {% if active_page == 'home' or 'login' %}
+    <div class="welcome-area {{ 'smaller-welcome' if active_page == 'convos' else '' }}" id="welcome">
+        {% if active_page == 'home' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1>Join or support our growing community of <strong>women entrepreneurs</strong> and <strong>business owners</strong></h1>
+                        <p>Help diverse talent thrive in their businesses and startups today!</p>
+                        <a href="{{ url_for('signup') }}" class="main-button-slider">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'login' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3>We provide the best opportunities to grow your business</h3>
+                        <p>Don't have an account yet? Click here to join our community!</p>
+                        <a href="{{ url_for('signup') }}" class="main-button-slider">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'signup' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3>We provide the best opportunities to grow your business</h3>
+                        <p>Already have an account? Click here to log in!</p>
+                        <a href="{{ url_for('login') }}" class="main-button-slider">Log in </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'funding' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3> Watch your business take off</h3>
+                        <p>Pitch your project! Our platform will help you gather funds to bring your ideas to life. </p>
+                        <a href="{{ url_for('signup') }}" class="main-button-slider">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'feedback' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3 style="color: white; margin-bottom: 2rem;"> We were all once beginners </h3>
+                        <p> Mentors from all walks of life are here to give feedback on your business plan. </p>
+                        <a href="{{ url_for('signup') }}" class="main-button-slider">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'convos' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3>Get advice from experienced professionals</h3>
+                        <p>Ask your mentor questions you have about making a statement in the small business world</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    {% endif %}
+
+    <!-- ***** Welcome Area End ***** -->
+
+    {% block heading %}
+    {% endblock %}
+
+    {% block body %}
+
+    {% endblock %}
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Place logo image here -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12 center-text pt-3">
+                    <a href="#">
+                        <img style="height: 140px; width:240px; margin-bottom: -60px; margin-left: 10px;" src="{{ url_for('static', filename='/images/white-thriveher.png') }}" />
+                    </a>
+                    <p class="copyright1" style="margin-bottom: -30px">Copyright &copy; 2020 Three pushes to a git - Design: TemplateMo</p>
+                    <p class="copyright2" style="margin-bottom: -30px"><a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="../assets/js/popper.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="../assets/js/scrollreveal.min.js"></script>
+    <script src="../assets/js/waypoints.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/imgfix.min.js"></script>
+
+    <!-- Global Init -->
+    <script src="../assets/js/custom.js"></script>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="DonKm1l4"></script>
+
+  </body>
+</html>

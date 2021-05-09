@@ -1,0 +1,315 @@
+{% extends "layout.html" %}
+
+{% set active_page = "home" %}
+{% set active_user = user %}
+
+{% block heading %}
+
+{% endblock %}
+
+{% block body %}
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="{{ url_for('static', filename='/images/featured-item-01.png') }}" alt=""></i>
+                                </div>
+                                <h5 class="features-title">Meaningful Connections</h5>
+                                <p>Meet other women entrepreneurs and business owners in the same field and learn from other perspectives and best practices.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img style="width:50px; height:50px" src="{{ url_for('static', filename='/images/001-feedback.svg') }}" alt=""></i>
+                                </div>
+                                <h5 class="features-title">Feedback and Funding</h5>
+                                <p>Share your business and get feedback and crowdfunding from our extensive community.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img style="width:52px; height:52px" src="{{ url_for('static', filename='/images/002-megaphone.svg') }}" alt=""></i>
+                                </div>
+                                <h5 class="features-title">Advertise Your Business</h5>
+                                <p>Join as a mentor and make a lifelong impact on other women as well as an opportunity to advertise your business and hire talented jobseekers.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="{{ url_for('static', filename='/images/teamwork.jpg') }}" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Let’s discuss your business or idea</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Connect with other women entrepreneurs and business owners about your business and grow together. Learn from established business owners and share your input on other businesses as well.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">We can help you to grow your business</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Not only do we provide mentorship with established mentors, but also an opportunity for business owners to advertise their businesses and gain funding.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="{{ url_for('static', filename='/images/grow.jpg') }}" class="rounded img-fluid d-block mx-auto" style="width: 500px; height:300px" alt="App">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>1-on-1 Mentorship</h1>
+                            <p>Looking for feedback or career advice from people who were once in the same situation as yourself?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***** Mini Box Start ***** -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                        <a href="#" class="mini-box">
+                            <i><img src="{{ url_for('static', filename='/images/001-resume.png') }}" alt=""></i>
+                            <span class="font-weight: 600"><strong>Application</strong></span>
+                            <span>Personalize your profile with your industry, knowledge areas, years of experience, what feedback or help you're looking for</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                        <a href="#" class="mini-box">
+                            <i><img style="width: 35px; height:35px;" src="{{ url_for('static', filename='/images/002-consultation.png') }}"  alt=""></i>
+                            <strong>Matching</strong>
+                            <span>We match female or non-binary entrepreneurs and business owners to women with established businesses.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                        <a href="#" class="mini-box">
+                            <i><img src="{{ url_for('static', filename='/images/003-help.png') }}"  alt=""></i>
+                            <strong>Conversation</strong>
+                            <span>Once a matching pair is found, we create a group chat in Conversations and you're free to start talking to each other.</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- ***** Mini Box End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+    <!-- ***** Testimonials Start ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Testimonials</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Hear are some things we've heard from our community members.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img style="width:50px; height:50px; margin-left:-250px" src="{{ url_for('static', filename='/images/001-testimonial.svg') }}" alt=""></i>
+                            <p>I was able to discover my authentic self through thrivHer. Starting my own business had always felt like a distant dream. With thriVer I made it come true. </p>
+                            <div class="user-image">
+                                <img style="width:60px; height:60px;" src="{{ url_for('static', filename='/images/headshot-alice.jpg') }}" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Alice Huang</h3>
+                                <span>Founder of StartUp & Company</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Testimonials Item End ***** -->
+
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img style="width:50px; height:50px; margin-left:-250px" src="{{ url_for('static', filename='/images/001-testimonial.svg') }}" alt=""></i>
+                            <p>I found a valuable connection to a community of women and LGBTQ+ entrepreneurs - bright and like-minded women striving for greatness. </p>
+                            <div class="user-image">
+                                <img style="width:60px; height:60px;" src="{{ url_for('static', filename='/images/headshot-jacquelyn.jpg') }}" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Jacquelyn Chow</h3>
+                                <span>Director of AStartUpToo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Testimonials Item End ***** -->
+
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img style="width:50px; height:50px; margin-left:-250px" src="{{ url_for('static', filename='/images/001-testimonial.svg') }}"  alt=""></i>
+                            <p>thrivHer is helping my project gain traction in the local community. It is only a couple of weeks until it takes off, and I'm so excited! </p>
+                            <div class="user-image">
+                                <img style="width:60px; height:60px;" src="{{ url_for('static', filename='/images/headshot-sojin.jpg') }}" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Sojin Lim</h3>
+                                <span>Prospective Business Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Testimonials Item End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials End ***** -->
+
+    <!-- ***** Counter Parallax Start ***** -->
+    <section class="counter">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-bottom">
+                            <strong>10,000+</strong>
+                            <span>Community Members</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-top">
+                            <strong>150+</strong>
+                            <span>Mentors</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-bottom">
+                            <strong>$1500+</strong>
+                            <span>Crowdfunding Raised</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item">
+                            <strong>15+</strong>
+                            <span>Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Counter Parallax End ***** -->
+
+    <!-- ***** Contact Us Start ***** -->
+    <section class="section colored" id="contact-us">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Need help? Have feedback for us?</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Feel free to send us anything that could make this a better community and environment for you and other womenx.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Contact Form Start ***** -->
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="get">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12 center-text">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- ***** Contact Form End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us End ***** -->
+
+{% endblock %}
