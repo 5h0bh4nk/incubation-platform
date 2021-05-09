@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'mysecret'
 socketio = SocketIO(app)
 
-client = MongoClient('mongodb+srv://Sojin:technica@cluster0.e0mte.mongodb.net/<Technica>?ssl=true&ssl_cert_reqs=CERT_NONE')
+client = MongoClient('mongodb+srv://shubh4nk:h3ermOzKU1XQ2dJv@cluster0.s7x0c.mongodb.net/test')
 db = client.Users
 
 
