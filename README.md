@@ -10,6 +10,7 @@ A platform for entrepreneurs and business owners to pitch their ideas and get gu
 
 
 # Steps to Deploy
+Steps to deploy on localhost
 ```python
 export FLASK_APP=init
 export FLASK_ENV=development
