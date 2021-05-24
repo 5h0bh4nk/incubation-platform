@@ -18,6 +18,10 @@ flask run
 ```
 
 # Progress
+- Mentorship w/ established business owners - 1:1 conversations
+- Crowdfunding for entrepreneurs to help build up capital
 
 
 # Expectations
+- To engage people to put up their ideas 
+- To help budding ideas get mentorship and guidance
